@@ -5,19 +5,17 @@ MAINTAINER ruiyang.zhang@utexas.edu
 # well as RubyGems. As the Ruby image itself is based on a
 # Debian image, we use apt-get to install those.
 RUN apt-get update && apt-get install -y \
-  build-essential \
-  nodejs
+    build-essential \
+    build-base \
+    linux-headers \
+    git \
+    postgresql-dev \
+    nodejs \
+    yarn \
+    tzdata \
+    graphviz \
+    gmp-dev
 
-RUN apk add --no-cache --update \
-  build-base \
-  linux-headers \
-  git \
-  postgresql-dev \
-  nodejs \
-  yarn \
-  tzdata \
-  graphviz \
-  gmp-dev
 
 # Configure the main working directory. This is the base
 # directory used in any further RUN, COPY, and ENTRYPOINT
