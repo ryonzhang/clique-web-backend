@@ -8,9 +8,9 @@ git clone https://github.com/ryonzhang/clique-web-backend.git
 sudo yum install docker
 sudo service docker start
 5.build docker image
-sudo docker build . -t clique
+sudo docker build . -t clique-web-backend
 6.run the container
-sudo docker run -d -p 3001:3001 clique-web
+sudo docker run -d -p 3001:3001 clique-web-backend
 7.go inside the docker container
 sudo docker exec -it 13b1f4b4eb08 bash
 8.migrate db
