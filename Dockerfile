@@ -8,6 +8,17 @@ RUN apt-get update && apt-get install -y \
   build-essential \
   nodejs
 
+RUN apk add --no-cache --update \
+  build-base \
+  linux-headers \
+  git \
+  postgresql-dev \
+  nodejs \
+  yarn \
+  tzdata \
+  graphviz \
+  gmp-dev
+
 # Configure the main working directory. This is the base
 # directory used in any further RUN, COPY, and ENTRYPOINT
 # commands.
